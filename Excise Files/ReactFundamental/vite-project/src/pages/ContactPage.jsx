@@ -1,13 +1,12 @@
-import React from 'react';
-import Menu from '../component/Menu';
+import Menu from "../component/Menu";
 
 const ContactPage = () => {
-    return (
-        <div>
-            <Menu/>
-            <h1>This is Contact Page </h1>
-        </div>
-    );
+  return (
+    <div>
+      <Menu />
+      <h1>This is Contact Page </h1>
+    </div>
+  );
 };
 
 export default ContactPage;
