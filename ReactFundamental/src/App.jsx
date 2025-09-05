@@ -1,10 +1,22 @@
 const App = () => {
+  const city = [
+    "Dhaka",
+    "Chittagong",
+    "Khulna",
+    "Barishal",
+    "Sylhet",
+    "Rajshahi",
+  ];
+
   return (
     <div>
-      <h1>Hello World</h1>
-      <input type="text" placeholder="Enter text here" />
-      <br />
-      <button>Submit</button>
+      {
+        <ul style={{  }}>
+          {city.map((c) => (
+            <li key={c} style={{ marginBottom: '5px', listStyleType: 'none', color: 'blue' }}>{c}</li>
+          ))}
+        </ul>
+      }
     </div>
   );
 };
