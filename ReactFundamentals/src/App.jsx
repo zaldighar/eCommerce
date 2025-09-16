@@ -1,20 +1,23 @@
-import { BrowserRouter, Routes, Route } from "react-router";
-import HomePage from './pages/HomePage.jsx';
-import ContactPage from './pages/ContactPage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
-import NotFound from "./pages/NotFound.jsx";
+import React, { useRef } from 'react';
+
 const App = () => {
+
+  let APIData = useRef(null);
+
+  const fetchData = () => {
+    
+  }
+
+const showData = () => {
+    
+  }
+
   return (
     <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='*' element={<NotFound />} />
-          <Route path='/about/:id/:name' element={<AboutPage />} />
-        </Routes>
-      </BrowserRouter>
+      <button onClick={fetchData}>Call API</button>
+     <button onClick={showData}>Show Data</button>
     </div>
   );
 };
+
 export default App;
