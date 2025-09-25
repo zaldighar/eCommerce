@@ -1,21 +1,21 @@
-import React, { useRef } from 'react';
+import React, {useState} from 'react';
 
 const App = () => {
 
-  let APIData = useRef(null);
+  const [list, setList] = useState([]);
+  const [item, setItem] = useState('');
 
-  const fetchData = () => {
-    
+  const addToList = (item) => {
+    list.push(item);
   }
 
-const showData = () => {
-    
-  }
+  
 
   return (
     <div>
-      <button onClick={fetchData}>Call API</button>
-     <button onClick={showData}>Show Data</button>
+      <p>{item}</p>
+      <input onChange={(e) => setItem(e.target.value)} type="text" placeholder='Item'/>
+      <button>Add</button>
     </div>
   );
 };
